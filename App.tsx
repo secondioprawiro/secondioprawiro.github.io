@@ -182,7 +182,7 @@ const App: React.FC = () => {
                 </div>
 
                 <img 
-                  src="./resources/user1.jpg"
+                  src="/resources/user1.jpg"
                   alt="Profile"
                   className="w-40 h-40 rounded-full object-cover mb-8 border-4 border-slate-700 shadow-lg"
                 />
