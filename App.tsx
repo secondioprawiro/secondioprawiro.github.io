@@ -7,29 +7,30 @@ import { Project, Category } from './types';
 const INITIAL_PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Dashboard',
-    description: 'A comprehensive admin dashboard to monitor sales, inventory, and customer analytics with real-time data visualization.',
-    category: Category.WEB,
-    tags: ['React', 'TypeScript', 'Tailwind', 'ChartJS'],
-    imageUrl: '',
-    link: '#'
+    title: 'Virtual Classroom Multi-User & Multi-Platform',
+    description: 'A application that designed to overcome the limitations of conventional distance learning (such as Zoom/Meet) by providing an immersive 3D environment.',
+    category: Category.GAME,
+    tags: ['C#', 'Unity', 'OOP'],
+    imageUrl: '/resources/project1/class1.jpg',
+    link: 'https://github.com/secondioprawiro/TA'
   },
   {
     id: '2',
-    title: 'Finance Tracker App',
-    description: 'A cross-platform mobile application for personal finance tracking with an automatic OCR-based receipt scanning feature.',
-    category: Category.MOBILE,
-    tags: ['Flutter', 'Dart', 'Firebase', 'OCR'],
-    imageUrl: '',
-    link: '#'
+    title: 'To-Do-List with Calendar',
+    description: 'A calendar that have to-do feature.',
+    category: Category.WEB,
+    tags: ['HTML', 'CSS', 'Javascript', 'PHP', 'MySQL', 'Native'],
+    imageUrl: '/resources/project2/progweb.png',
+    link: 'https://github.com/secondioprawiro/miniproject_progweb'
   },
   {
     id: '3',
-    title: 'Modern Brand Identity',
-    description: 'Complete visual identity design for a financial technology startup, including logo, color palette, and typography.',
-    category: Category.DESIGN,
-    tags: ['Figma', 'Illustrator', 'Branding'],
-    imageUrl: ''
+    title: 'Simple 2D Game RPG',
+    description: 'This project was create to implement Scriptable Object as static data and JSON as a dynamic data (save-load)',
+    category: Category.GAME,
+    tags: ['C#', 'Unity', 'OOP', 'Scriptable Object', 'JSON'],
+    imageUrl: '/resources/project3/game.png',
+    link: 'https://github.com/secondioprawiro/Simple-2D-Game'
   }
 ];
 
@@ -255,7 +256,7 @@ const App: React.FC = () => {
                         <span className="w-2 h-2 rounded-full bg-green-500"></span> Backend & Cloud
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Node.js', 'Laravel', 'MySQL', 'SQLite' , 'Docker'].map((tech) => (
+                        {['Express.js', 'Laravel', 'MySQL', 'SQLite' , 'Docker'].map((tech) => (
                           <span key={tech} className="px-3 py-1.5 bg-slate-950 text-slate-300 rounded-lg text-sm border border-slate-800 hover:border-green-500/50 hover:text-white transition-colors cursor-default">
                             {tech}
                           </span>
@@ -309,6 +310,17 @@ const App: React.FC = () => {
                   Featured Projects
                 </h2>
                 <p className="text-slate-400 text-lg">A collection of the best projects I have completed.</p>
+                <p className="text-slate-400 text-lg">
+                  Visit my{' '}
+                  <a
+                    href="https://github.com/secondioprawiro"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-accent hover:underline font-semibold"
+                  >
+                    Github
+                  </a>{' '}for more projects.
+                </p>
               </div>
               
               {/* Filter Bar */}

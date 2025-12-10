@@ -2,8 +2,7 @@ export enum Category {
   ALL = 'Semua',
   WEB = 'Web Dev',
   MOBILE = 'Mobile App',
-  DESIGN = 'UI/UX Design',
-  WRITING = 'Writing',
+  GAME = 'Game Dev',
   OTHER = 'Lainnya'
 }
 
