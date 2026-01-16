@@ -49,6 +49,16 @@ const INITIAL_PROJECTS: Project[] = [
     tags: ['Kotlin', 'MVVM', 'DAO'],
     imageUrl: '/resources/project5/github_app.png',
     link: 'https://github.com/secondioprawiro/3_androidfundamental_secondio'
+  },
+  {
+    id: '6',
+    title: 'AI-Wrapper',
+    description: 'This project is a content generator that built with Next.js 14, Tailwind CSS, Google Gemini API for generate content,' +
+    'and PostgreSQL for database',
+    category: Category.WEB,
+    tags: ['Next.js', 'Tailwind CSS', 'Google Gemini', 'PostgreSQL', 'TypeScript'],
+    imageUrl: '/resources/project6/AI-Wrapper.png',
+    link: 'https://github.com/secondioprawiro/AI-Wrapper'
   }
 ];
 
