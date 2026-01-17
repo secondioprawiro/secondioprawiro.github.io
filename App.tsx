@@ -259,7 +259,7 @@ const App: React.FC = () => {
                         <span className="w-2 h-2 rounded-full bg-blue-500"></span> Frontend & Web
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['React', 'TypeScript', 'Tailwind', 'Next.js', 'Vue.js', 'Bootstrap'].map((tech) => (
+                        {['React.js', 'Tailwind', 'Next.js', 'Vue.js', 'Bootstrap'].map((tech) => (
                           <span key={tech} className="px-3 py-1.5 bg-slate-950 text-slate-300 rounded-lg text-sm border border-slate-800 hover:border-blue-500/50 hover:text-white transition-colors cursor-default">
                             {tech}
                           </span>
@@ -273,7 +273,7 @@ const App: React.FC = () => {
                         <span className="w-2 h-2 rounded-full bg-purple-500"></span> Game Development
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Unity 3D', 'C#', 'Blender'].map((tech) => (
+                        {['Unity 3D/2D', 'Blender'].map((tech) => (
                           <span key={tech} className="px-3 py-1.5 bg-slate-950 text-slate-300 rounded-lg text-sm border border-slate-800 hover:border-purple-500/50 hover:text-white transition-colors cursor-default">
                             {tech}
                           </span>
@@ -287,7 +287,7 @@ const App: React.FC = () => {
                         <span className="w-2 h-2 rounded-full bg-green-500"></span> Backend & Cloud
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Express.js', 'Laravel', 'MySQL', 'SQLite', 'Docker'].map((tech) => (
+                        {['Express.js', 'Next.js', 'Laravel', 'Flask', 'MySQL', 'SQLite', 'PostgreSQL', 'Docker', 'AWS'].map((tech) => (
                           <span key={tech} className="px-3 py-1.5 bg-slate-950 text-slate-300 rounded-lg text-sm border border-slate-800 hover:border-green-500/50 hover:text-white transition-colors cursor-default">
                             {tech}
                           </span>
@@ -315,7 +315,7 @@ const App: React.FC = () => {
                         <span className="w-2 h-2 rounded-full bg-yellow-500"></span> Mobile Dev
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Kotlin', 'Flutter'].map((tech) => (
+                        {['Android Studio', 'Flutter'].map((tech) => (
                           <span key={tech} className="px-3 py-1.5 bg-slate-950 text-slate-300 rounded-lg text-sm border border-slate-800 hover:border-green-500/50 hover:text-white transition-colors cursor-default">
                             {tech}
                           </span>
