@@ -59,6 +59,38 @@ const INITIAL_PROJECTS: Project[] = [
     tags: ['Next.js', 'Tailwind CSS', 'Google Gemini', 'PostgreSQL', 'TypeScript'],
     imageUrl: '/resources/project6/AI-Wrapper.png',
     link: 'https://github.com/secondioprawiro/AI-Wrapper'
+  },
+  {
+    id: '7',
+    title: 'Asset Tracker App',
+    description: 'This project is a asset/stock tracker app that focussed on Indonesia stock market and build with Python as Data Source from Yahoo Finance, ' +
+    '.NET for the Backend with SQLite as database and Electron.js for the Frontend desktop app',
+    category: Category.OTHER,
+    tags: ['C#', '.NET', 'Electron.js', 'SQLite', 'Python', 'Desktop App'],
+    imageUrl: '/resources/project7/project7-1.png',
+    imageUrls: [
+      '/resources/project7/project7-1.png', 
+      '/resources/project7/project7-2.png'
+    ],
+    link: 'https://github.com/secondioprawiro/AssetTrackerApp'
+  },
+  {
+    id: '8',
+    title: 'Tani Trust',
+    description: 'This project is a WEB3 app that build for hackathon. This project is a platform that helps farmers to sell their products by their own. '
+    + 'The main idea is to eliminate the middleman in the agricultural supply chain, ' +
+    'so that farmers can get a better price for their products and consumers can get fresh products at a lower price. ' +
+    'This project is built with Next.js, Tailwind CSS, SUI as a blockchain Network and Smart Contract, Google Gemini for generate image,' +
+    'and PostgreSQL for database',
+    category: Category.WEB,
+    tags: ['TypeScript', 'Move' ,'Next.js', 'Tailwind CSS', 'SUI', 'Google Gemini', 'PostgreSQL', 'Web3'],
+    imageUrl: '/resources/project8/tanitrust1.png',
+    imageUrls: [
+      '/resources/project8/tanitrust1.png', 
+      '/resources/project8/tanitrust2.png',
+      '/resources/project8/tanitrust3.png'
+    ],
+    link: 'https://github.com/secondioprawiro/TaniTrust'
   }
 ];
 
@@ -301,7 +333,7 @@ const App: React.FC = () => {
                         <span className="w-2 h-2 rounded-full bg-pink-500"></span> Programming Language
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {['C', 'C#', 'Java', 'Python', 'PHP', 'Javascript', 'Kotlin', 'Dart'].map((tech) => (
+                        {['C', 'C#', 'Java', 'Python', 'PHP', 'Javascript', 'Kotlin', 'Dart', 'Move'].map((tech) => (
                           <span key={tech} className="px-3 py-1.5 bg-slate-950 text-slate-300 rounded-lg text-sm border border-slate-800 hover:border-pink-500/50 hover:text-white transition-colors cursor-default">
                             {tech}
                           </span>

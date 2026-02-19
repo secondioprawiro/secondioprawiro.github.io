@@ -13,6 +13,7 @@ export interface Project {
   category: string; // Stored as string to allow flexibility, mapped to enum for UI
   tags: string[];
   imageUrl: string;
+  imageUrls?: string[];
   link?: string;
 }
 
