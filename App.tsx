@@ -91,6 +91,24 @@ const INITIAL_PROJECTS: Project[] = [
       '/resources/project8/tanitrust3.png'
     ],
     link: 'https://github.com/secondioprawiro/TaniTrust'
+  },
+  {
+    id: '9',
+    title: 'Bidding Online Auction (In-Proggress)',
+    description: 'This is a modern real-time auction platform built with the TALL stack (Tailwind, Alpine.js, Laravel, and Livewire) ' +
+    'to deliver a seamless and highly reactive user experience. By leveraging Laravel Reverb and WebSockets, the application ensures ' +
+    'that bid updates are broadcasted instantly to all users without requiring page refreshes. Designed as a high-performance portfolio showcase, ' +
+    'it emphasizes real-time data handling, clean architectural patterns, and robust automated testing with Pest PHP.',
+    category: Category.WEB,
+    tags: ['PHP', 'Laravel' ,'Laravel Octane (FrankenPHP)', 'Laravel Reverb', 'Livewire', 'Alpine.js', 
+      'Tailwind CSS', 'Pest PHP', 'Laravel Sail (Docker)', 'Laravel Breeze',
+      'Laravel Echo & Pusher JS', 'Axios', 'Laravel Tinker'],
+    imageUrl: '/resources/project9/auction1.png',
+    imageUrls: [
+      '/resources/project9/auction1.png', 
+      '/resources/project9/auction2.png'
+    ],
+    link: 'https://github.com/secondioprawiro/laravel-auction'
   }
 ];
 
@@ -99,12 +117,25 @@ const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category | string>(Category.ALL);
   const [activeSection, setActiveSection] = useState('home');
   const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedDescriptions, setExpandedDescriptions] = useState<Set<string>>(new Set());
+
+  const toggleDescription = (projectId: string) => {
+    setExpandedDescriptions(prev => {
+      const next = new Set(prev);
+      if (next.has(projectId)) {
+        next.delete(projectId);
+      } else {
+        next.add(projectId);
+      }
+      return next;
+    });
+  };
+
 
   const filteredProjects = selectedCategory === Category.ALL
     ? projects
     : projects.filter(p => p.category === selectedCategory);
 
-  const displayedProjects = isExpanded ? filteredProjects : filteredProjects.slice(0, 3);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -408,7 +439,12 @@ const App: React.FC = () => {
               {/* Primary Grid (First 3 Projects) */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.slice(0, 3).map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+                  <ProjectCard 
+                    key={project.id} 
+                    project={project} 
+                    isDescExpanded={expandedDescriptions.has(project.id)}
+                    onToggleDesc={() => toggleDescription(project.id)}
+                  />
                 ))}
               </div>
 
@@ -422,7 +458,12 @@ const App: React.FC = () => {
                         className={isExpanded ? 'animate-reveal' : ''}
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
-                        <ProjectCard project={project} />
+                        <ProjectCard 
+                          key={project.id}
+                          project={project} 
+                          isDescExpanded={expandedDescriptions.has(project.id)}
+                          onToggleDesc={() => toggleDescription(project.id)}
+                        />
                       </div>
                     ))}
                   </div>

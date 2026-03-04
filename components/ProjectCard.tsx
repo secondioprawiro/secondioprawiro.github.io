@@ -4,11 +4,12 @@ import { ExternalLink, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ProjectCardProps {
   project: Project;
+  isDescExpanded: boolean;
+  onToggleDesc: () => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDescExpanded, onToggleDesc }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isDescExpanded, setIsDescExpanded] = useState(false);
   
   const images = project.imageUrls && project.imageUrls.length > 0 
     ? project.imageUrls 
@@ -93,7 +94,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </p>
           {project.description.length > 120 && (
             <button 
-              onClick={() => setIsDescExpanded(!isDescExpanded)}
+              onClick={onToggleDesc}
               className="text-accent text-xs font-semibold mt-1 hover:underline focus:outline-none"
             >
               {isDescExpanded ? 'Less' : 'More...'}
