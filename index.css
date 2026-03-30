@@ -1,0 +1,7 @@
+/* GitHub contribution calendar container — matches the glass design system */
+.calendar-glass img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
